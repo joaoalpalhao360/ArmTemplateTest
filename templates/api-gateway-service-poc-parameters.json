@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "apimServiceName": {
-      "value": "ArcPricingService"
+      "value": "api-gateway-service-poc"
     },
     "linkedTemplatesBaseUrl": {
       "value": "https://raw.githubusercontent.com/joaoalpalhao360/ArmTemplateTest/main/templates/"

@@ -30,7 +30,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('linkedTemplatesBaseUrl'), 'ArcPricingService-apiVersionSets.template.json')]",
+          "uri": "[concat(parameters('linkedTemplatesBaseUrl'), 'api-gateway-service-poc-apiVersionSets.template.json')]",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {
