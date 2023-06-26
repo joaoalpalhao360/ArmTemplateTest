@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "apimServiceName": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2021-08-01",
+      "type": "Microsoft.ApiManagement/service/apis",
+      "name": "[concat(parameters('apimServiceName'), '/ArcPricingApi')]",
+      "dependsOn": [],
+      "properties": {
+        "apiVersionSetId": "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', parameters('apimServiceName'), 'ArcPricingApiVersionSet')]",
+        "path": "arc/pricing/106449819eec4678b413654277c77bbe",
+        "value": "https://bizay-arc-pt-pricing-api.azurewebsites.net/swagger/v1.0.0.15166/swagger.json",
+        "format": "openapi-link"
+      }
+    }
+  ]
+}
