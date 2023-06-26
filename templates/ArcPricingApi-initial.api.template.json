@@ -18,7 +18,7 @@
       "properties": {
         "apiVersionSetId": "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', parameters('apimServiceName'), 'ArcPricingApiVersionSet')]",
         "serviceUrl": "[parameters('ArcPricingApi-ServiceUrl')]",
-        "path": "arc/pricing/3b741a232d574f1d875166ffa7e0aa77",
+        "path": "arc/pricing/882be3ad5b8543e282ef06d7893328d9",
         "value": "https://bizay-arc-pt-pricing-api.azurewebsites.net/swagger/v1.0.0.15166/swagger.json",
         "format": "openapi-link"
       }

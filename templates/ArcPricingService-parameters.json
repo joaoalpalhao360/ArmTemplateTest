@@ -6,7 +6,10 @@
       "value": "ArcPricingService"
     },
     "linkedTemplatesBaseUrl": {
-      "value": "https://example.com"
+      "value": "https://raw.githubusercontent.com/joaoalpalhao360/ArmTemplateTest/main/templates/"
+    },
+    "arcPricingApi-ServiceUrl": {
+      "value": "https://bizay-arc-pt-pricing-api.azurewebsites.net/"
     }
   },
   "resources": []

@@ -13,6 +13,12 @@
       "metadata": {
         "description": "Base URL of the repository"
       }
+    },
+    "arcPricingApi-ServiceUrl": {
+      "type": "string",
+      "metadata": {
+        "description": "ServiceUrl parameter for API: ArcPricingApi"
+      }
     }
   },
   "resources": [
@@ -50,6 +56,9 @@
         "parameters": {
           "apimServiceName": {
             "value": "[parameters('apimServiceName')]"
+          },
+          "arcPricingApi-ServiceUrl": {
+            "value": "[parameters('ArcPricingApi-ServiceUrl')]"
           }
         }
       }
@@ -70,6 +79,9 @@
         "parameters": {
           "apimServiceName": {
             "value": "[parameters('apimServiceName')]"
+          },
+          "arcPricingApi-ServiceUrl": {
+            "value": "[parameters('ArcPricingApi-ServiceUrl')]"
           }
         }
       }
