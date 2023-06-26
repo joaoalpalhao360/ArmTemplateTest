@@ -4,6 +4,9 @@
   "parameters": {
     "apimServiceName": {
       "type": "string"
+    },
+    "arcPricingApi-ServiceUrl": {
+      "type": "string"
     }
   },
   "resources": [
@@ -13,12 +16,14 @@
       "name": "[concat(parameters('apimServiceName'), '/ArcPricingApi')]",
       "dependsOn": [],
       "properties": {
+        "apiRevision": "1",
         "apiVersion": "v1",
         "isCurrent": false,
         "apiVersionDescription": "My first version",
         "apiVersionSetId": "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', parameters('apimServiceName'), 'ArcPricingApiVersionSet')]",
         "subscriptionRequired": false,
         "displayName": "ArcPricingApi",
+        "serviceUrl": "[parameters('ArcPricingApi-ServiceUrl')]",
         "path": "arc/pricing",
         "protocols": [
           "https"
