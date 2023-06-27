@@ -6,7 +6,7 @@
       "value": "api-gateway-service-poc"
     },
     "linkedTemplatesBaseUrl": {
-      "value": "https://raw.githubusercontent.com/joaoalpalhao360/ArmTemplateTest/main/templates/"
+      "value": "https://raw.githubusercontent.com/joaoalpalhao360/ArmTemplateTest/main/templates/arc/pricing-api/"
     },
     "arcPricingApi-ServiceUrl": {
       "value": "https://bizay-arc-pt-pricing-api.azurewebsites.net/"

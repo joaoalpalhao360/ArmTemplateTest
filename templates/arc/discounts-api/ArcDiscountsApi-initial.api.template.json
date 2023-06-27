@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "apimServiceName": {
+      "type": "string"
+    },
+    "arcDiscountsApi-ServiceUrl": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2021-08-01",
+      "type": "Microsoft.ApiManagement/service/apis",
+      "name": "[concat(parameters('apimServiceName'), '/ArcDiscountsApi')]",
+      "dependsOn": [],
+      "properties": {
+        "apiVersionSetId": "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', parameters('apimServiceName'), 'ArcDiscountsApiVersionSet')]",
+        "serviceUrl": "[parameters('ArcDiscountsApi-ServiceUrl')]",
+        "path": "arc/discounts/03f368d5c3eb4bb58c2ec6c392679ca8",
+        "value": "https://bizay-arc-pt-discounts-api.azurewebsites.net/swagger/v1.0.0.16188/swagger.json",
+        "format": "openapi-link"
+      }
+    }
+  ]
+}
