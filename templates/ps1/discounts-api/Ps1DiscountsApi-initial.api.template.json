@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "apimServiceName": {
+      "type": "string"
+    },
+    "ps1DiscountsApi-ServiceUrl": {
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2021-08-01",
+      "type": "Microsoft.ApiManagement/service/apis",
+      "name": "[concat(parameters('apimServiceName'), '/Ps1DiscountsApi')]",
+      "dependsOn": [],
+      "properties": {
+        "apiVersionSetId": "[resourceId('Microsoft.ApiManagement/service/apiVersionSets', parameters('apimServiceName'), 'Ps1DiscountsApiVersionSet')]",
+        "serviceUrl": "[parameters('Ps1DiscountsApi-ServiceUrl')]",
+        "path": "ps1/discounts/913edcd29e8f4ea5b4361ef49db10b89",
+        "value": "https://bizay-ps1-pt-discounts-api.azurewebsites.net/swagger/v1.0.0.16188/swagger.json",
+        "format": "openapi-link"
+      }
+    }
+  ]
+}

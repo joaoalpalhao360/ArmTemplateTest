@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "apimServiceName": {
+      "value": "api-gateway-service-poc"
+    },
+    "linkedTemplatesBaseUrl": {
+      "value": "https://raw.githubusercontent.com/joaoalpalhao360/ArmTemplateTest/main/templates/ps1/discounts-api/"
+    },
+    "ps1DiscountsApi-ServiceUrl": {
+      "value": "https://bizay-ps1-pt-discounts-api.azurewebsites.net/"
+    }
+  },
+  "resources": []
+}
